@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Rajshahi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#feffff;
+    color:#1b1b1b;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(3, 47, 88, 0.822),rgba(3, 122, 106, 0.945)),
+    url("rajshahi-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    max-width:700px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#ff970ff8;
+    color:rgb(253, 250, 250);
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#b9b4ac;
+    transform:translateY(-3px);
+}
+
+/* Section */
+.section-title{
+    text-align:center;
+    margin:60px 0 30px;
+    color:#00695c;
+    font-size:2.5rem;
+}
+
+/* Cards */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+.container h1{
+    color:#00695c;
+    margin-bottom:20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.container p{
+    line-height:1.8;
+    font-size:18px;
+    color:#444;
+    text-align:justify;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-bottom:60px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#00695c;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#555;
+}
+
+.references-section {
+    background: #f4f9f8;
+    padding: 50px 0;
+    border-top: 1px solid #e0eceb;
+}
+
+.references-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.references-list li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #0e0d0d;
+    line-height: 1.6;
+}
+
+.references-list a {
+    color: #045d74;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.references-list a:hover {
+    color: #318319;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer{
+    background:#06586d;
+    color:rgb(253, 251, 251);
+    text-align:center;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Explore Rajshahi</h1>
+        <p>
+            Discover the historical beauty, cultural heritage,
+            and architectural wonders of Rajshahi, Bangladesh.
+        </p>
+        <a href="#places" class="btn">Explore Places</a>
+    </div>
+</section>
+<div class="container">
+<h1>About Rajshahi</h1>
+    <p>Rajshahi is one of the major cities in northwestern Bangladesh,
+     situated on the northern bank of the Padma River. Known as the
+     "Silk City" and the "Education City of Bangladesh," Rajshahi is
+     famous for its rich cultural heritage, historical landmarks,
+     delicious mangoes, and traditional silk industry.</P><br>
+    <p>
+     The region is home to many remarkable historical sites,
+     including Puthia Rajbari, Bagha Mosque, Natore Rajbari,
+     Kusumba Mosque, Varendra Research Museum, and several ancient
+     temples and palaces. These attractions reflect the architectural
+     beauty and historical significance of Bengal's past.
+    </p><br>
+
+    <p>
+     Besides its historical treasures, Rajshahi offers beautiful
+     river views, peaceful parks, museums, educational institutions,
+     and vibrant local markets, making it one of the most attractive
+     tourist destinations in Bangladesh.
+    </p>
+
+</div>
+<section id="places">
+    <h2 class="section-title">Historical Places</h2>
+
+    <div class="container">
+        <div class="cards">
+
+            <div class="card">
+                <a href="puthia.html">
+                <img src="images/puthia rajbari.jpg" alt="Puthia Rajbari">
+                <div class="card-content">
+                    <h3>Puthia Rajbari</h3></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="bagha.html">
+                <img src="images/bagha mosque.jpg" alt="Bagha Mosque">
+                <div class="card-content">
+                    <h3>Bagha Mosque</h3></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="natore.html">
+                <img src="images/natore rajbari.jpg" alt="natore rajbari">
+                <div class="card-content">
+                    <h3>Natore Rajbari</h3></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="kusumba.html">
+                <img src="images/kusumba.webp" alt="Kusumba Mosque">
+                <div class="card-content">
+                    <h3>Kusumba Mosque</h3></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="rajshahi college.html">
+                <img src="images/rajshahicollege.jpg" alt="Rajshahi college">
+                <div class="card-content">
+                    <h3>Rajshahi College</h3></a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="dighapatia-rajbari.html">
+                <img src="images/dighapatia.webp" alt="dighapatia rajbari">
+                <div class="card-content">
+                    <h3>Dighapatia Rajbari </h3></a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="paharpur.html">
+                <img src="images/paharpur.jpg" alt="paharpur">
+                <div class="card-content">
+                    <h3>Paharpur</h3></a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="varendra museum.html">
+                <img src="images/museum.webp" alt="varendra museum">
+                <div class="card-content">
+                    <h3>Varendra Museum</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- References Section -->
+<section class="references-section">
+    <div class="container">
+        <h2 style="color: #08534bf5; font-size: 2rem; border-bottom: 2px solid #00695c; text-align: center; padding-bottom: 10px;">References</h2>
+        <ul class="references-list">
+            <li>Information, picture and historical details sourced via search insights on <a href="https://www.google.com" target="_blank">Google</a>.</li>
+            <li>Historical data, timelines, and architectural facts compiled from <a href="https://en.wikipedia.org/wiki/Rajshahi" target="_blank">Wikipedia, the Free Encyclopedia</a>.</li>
+        </ul>
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2026 Explore Rajshahi | Historical Heritage Website</p>
+</footer>
+
+</body>
+</html>
