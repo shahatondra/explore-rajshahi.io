@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusumba Mosque - Rajshahi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("images/kusumba.webp");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:rgb(248, 244, 244);
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.container h2{
+    color:#00695c;
+    margin-bottom:20px;
+}
+
+.container p{
+    line-height:1.8;
+    font-size:18px;
+    color:#444;
+    text-align:justify;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.box{
+    background:powderblue   ;
+    color:rgb(15, 15, 15);
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+    cursor: pointer; 
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #bbb;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+footer {
+    background-color: #124861;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 40px; }
+    .hero p { font-size: 18px; }
+    .container { padding: 20px; }
+    .lightbox-content { max-width: 95%; }
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div>
+        <h1>Kusumba Mosque</h1>
+        <p>The Islamic architectural and historical heritage of Rajshahi</p>
+    </div>
+</section>
+
+<main class="container">
+    <h2>About Kusumba Mosque</h2>
+    <p>
+     The Kusumba Mosque (Bengali: কুসুম্বা শাহী মসজিদ) is a mosque, located in the village of Kusumba, in Manda Upazila, Naogaon District, in the Rajshahi Division of Bangladesh. It was completed in 1559, and the mosque is one of Bangladesh's national heritage sites. The mosque is often nicknamed "<b>The Black Gem of Bangladesh</b>."
+    </p>
+    <br>
+    <p> 
+        Construction on the mosque began in 1558 and ended in 1559, according to an inscription on the exterior of the mosque. During this period, Bangladesh had a string of Afghani rulers. The Kusumba mosque was built under one of the last Suri rulers, named Ghiyasuddin Bahadur Shah. The construction of the mosque was overseen by a high-ranking official named Sulaiman. 
+        <br><br>
+        Although the mosque was built under the Suri rule, the architectural pattern was not influenced by earlier Suri architecture of North India. Instead, the mosque was built in the style of other Bangladeshi mosques. The Kusumba Mosque went on to serve as inspiration for other mosques in Bangladesh and Myanmar.
+    </p>
+</main>
+
+<section class="container">
+    <div class="cards">
+        <div class="card" onclick="openLightbox('images/kusumba1.jpg')">
+            <img src="images/kusumba1.jpg" alt="Kusumba Mosque Black Stone Front Facade">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/kusumba2.jpg')">
+            <img src="images/kusumba2.jpg" alt="Kusumba Mosque Side Angle View">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/kusumba3.jpg')">
+            <img src="images/kusumba3.jpg" alt="Kusumba Mosque Architectural Details">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/kusumba4.webp')">
+            <img src="images/kusumba4.webp" alt="Kusumba Mosque Historic Structure Complex">
+        </div>
+    </div>
+</section>
+
+
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged view" onclick="event.stopPropagation()">
+</div>
+
+<section class="info">
+    <div class="box">
+        <h3>Location</h3>
+        <p>Naogaon, Rajshahi</p>
+    </div>
+
+    <div class="box">
+        <h3>Built By</h3>
+        <p>Ghiyasuddin Bahadur Shah</p>
+    </div>
+
+    <div class="box">
+        <h3>Type</h3>
+        <p>Historical Mosque</p>
+    </div>
+
+    <div class="box">
+        <h3>Famous For</h3>
+        <p>Black Stone Architecture</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Rajshahi Historical Places Project</p>
+</footer>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(imageSrc) {
+        lightboxImg.src = imageSrc;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+    }
+</script>
+
+</body>
+</html>

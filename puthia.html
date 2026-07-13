@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puthia Rajbari - Rajshahi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("images/puthia rajbari.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:rgb(248, 244, 244);
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.container h2{
+    color:#00695c;
+    margin-bottom:20px;
+}
+
+.container p{
+    line-height:1.8;
+    font-size:18px;
+    color:#444;
+    text-align:justify;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.box{
+    background:powderblue;
+    color:rgb(32, 31, 31);
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+    cursor: pointer; 
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #bbb;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+footer {
+    background-color: #124861;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 40px; }
+    .hero p { font-size: 18px; }
+    .container { padding: 20px; }
+    .lightbox-content { max-width: 95%; }
+}
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+    <div>
+        <h1>Puthia Rajbari</h1>
+        <p>The Royal Heritage of Rajshahi</p>
+    </div>
+</section>
+
+<main class="container">
+    <h2>About Puthia Rajbari</h2>
+    <p>
+    Puthia Rajbari or Panchani Zamindarbari is the residence of Maharani Hemantkumari Devi.
+     Puthia Rajbari in Rajshahi is one of the archaeological heritages of Bengal. In 1895,
+      Maharani Hemantkumari Devi built the present two-storey rectangular palace in the attractive 
+      Indo-European architectural style.
+    </p>
+    <br>
+    <p>  
+    During the Mughal period in the 17th century, the Puthia zamindari was the oldest of the 
+    various states of Bengal. It is said that after a certain Nilambar received the title of 'Raja'
+     from the Mughal Emperor Jahangir, it came to be known as the Puthia Rajbari.
+      In 1744, the zamindari was divided. In that division, the eldest son of the zamindari received 
+      five and a half annas of the property and the other three sons received three and a half annas.
+       The zamindari system existed until 1950. When the system was abolished, the zamindari of the 
+       Puthia Rajbari also became extinct. But even though the zamindari system was abolished, their
+       palaces, temples and other structures built during that period still survive. This palace was
+         built in 1895 by Maharani Hemanta Kumari Devi in honour of her mother-in-law Maharani Sarat Sundari Devi.
+    </p> 
+</main>
+
+<section class="container">
+    <div class="cards">
+        <div class="card" onclick="openLightbox('images/puthia1.jpg')">
+            <img src="images/puthia1.jpg" alt="Puthia Rajbari Main Palace Exterior">
+        </div>
+        
+        <div class="card" onclick="openLightbox('images/puthia2.jpg')">
+            <img src="images/puthia2.jpg" alt="Puthia Rajbari Front Pillars">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/puthia3.jpg')">
+            <img src="images/puthia3.jpg" alt="Puthia Rajbari Terracotta Temple Detail">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/puthia4.jpg')">
+            <img src="images/puthia4.jpg" alt="Puthia Rajbari Courtyard View">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/puthia5.jpg')">
+            <img src="images/puthia5.jpg" alt="Puthia Rajbari Side Wings">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/puthia6.jpg')">
+            <img src="images/puthia6.jpg" alt="Puthia Rajbari Intricate Architecture">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/puthia7.webp')">
+            <img src="images/puthia7.webp" alt="Puthia Rajbari Surrounding Grounds">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/puthia8.jpg')">
+            <img src="images/puthia8.jpg" alt="Puthia Rajbari Historic Temple View">
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged view" onclick="event.stopPropagation()">
+</div>
+
+<section class="info">
+    <div class="box">
+        <h3>Location</h3>
+        <p>Puthia, Rajshahi</p>
+    </div>
+    <div class="box">
+        <h3>Built By</h3>
+        <p>Puthia Royal Family</p>
+    </div>
+    <div class="box">
+        <h3>Type</h3>
+        <p>Historical Palace</p>
+    </div>
+    <div class="box">
+        <h3>Famous For</h3>
+        <p>Architecture &amp; Temples</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Rajshahi Historical Places Project</p>
+</footer>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(imageSrc) {
+        lightboxImg.src = imageSrc;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+    }
+</script>
+
+</body>
+</html>

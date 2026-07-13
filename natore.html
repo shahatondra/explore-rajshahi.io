@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natore Rajbari - Rajshahi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("images/natore\ rajbari.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:rgb(248, 244, 244);
+}
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    background:rgb(253, 253, 253);
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.container h2{
+    color:#085e54;
+    margin-bottom:20px;
+}
+
+.container p{
+    line-height:1.8;
+    font-size:18px;
+    color:#444;
+    text-align:justify;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.box{
+    background:powderblue;
+    color:rgb(15, 15, 15);
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+    cursor: pointer; 
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.lightbox-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #bbb;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+footer {
+    background-color: #124861;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 40px; }
+    .hero p { font-size: 18px; }
+    .container { padding: 20px; }
+    .lightbox-content { max-width: 95%; }
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div>
+        <h1>Natore Rajbari</h1>
+        <p>The Royal Heritage of Rajshahi</p>
+    </div>
+</section>
+
+<main class="container">
+    <h2>About Natore Rajbari</h2>
+    <p>
+       Natore Rajbari, also known as <b>Natore Palace</b> or <b>Pagla Raja’s Palace</b>, is one of the most important historical landmarks in Bangladesh. Located in Natore, it was the royal residence of the Rajshahi Raj family, a powerful zamindar dynasty of Bengal.
+    </p>
+    <br>
+    <p>
+       The palace was established by Raja Ramjivan Moitra, who founded the Natore Raj family in the early 18th century. It became the administrative and residential center of the Rajshahi Zamindari, one of the largest zamindari estates in Bengal.
+    <br><br>
+       Natore Rajbari is closely associated with Rani Bhabani, a renowned philanthropist and zamindar. After the death of her husband, Raja Ramkanta Moitra, she efficiently managed and expanded the estate. Rani Bhabani became famous for her charitable works, including the construction of temples, roads, ponds, and other public welfare projects.
+    </p>
+</main>
+
+<section class="container">
+    <div class="cards">
+        <div class="card" onclick="openLightbox('images/natore1.jpg')">
+            <img src="images/natore1.jpg" alt="Natore Rajbari Palace Grounds">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore2.jpg')">
+            <img src="images/natore2.jpg" alt="Natore Rajbari Historic Main Structure">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore3.jpg')">
+            <img src="images/natore3.jpg" alt="Natore Rajbari Architectural Columns">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore4.jpg')">
+            <img src="images/natore4.jpg" alt="Natore Rajbari Front Facade View">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore5.jpg')">
+            <img src="images/natore5.jpg    " alt="Natore Rajbari Royal Pond Moat View">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore6.jpg')">
+            <img src="images/natore6.jpg" alt="Natore Rajbari Intricate Palace Openings">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore7.jpg')">
+            <img src="images/natore7.jpg" alt="Natore Rajbari Surrounding Temple Walls">
+        </div>
+
+        <div class="card" onclick="openLightbox('images/natore8.webp')">
+            <img src="images/natore8.webp" alt="Natore Rajbari Temple Courtyard Details">
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged view" onclick="event.stopPropagation()">
+</div>
+
+<section class="info">
+    <div class="box">
+        <h3>Location</h3>
+        <p>Natore, Rajshahi</p>
+    </div>
+
+    <div class="box">
+        <h3>Built By</h3>
+        <p>Natore Royal Family</p>
+    </div>
+
+    <div class="box">
+        <h3>Type</h3>
+        <p>Historical Palace</p>
+    </div>
+
+    <div class="box">
+        <h3>Famous For</h3>
+        <p>Architecture & Temples</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Rajshahi Historical Places Project</p>
+</footer>
+
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(imageSrc) {
+        lightboxImg.src = imageSrc;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        lightboxImg.src = ''; 
+    }
+</script>
+
+</body>
+</html>
